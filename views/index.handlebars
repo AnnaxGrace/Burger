@@ -1,3 +1,11 @@
 <h1>Hamburgers</h1>
 
-<h2>{{burgers}}</h2>
+
+
+{{#each burgers}}
+    <h2>{{this.burger_name}}</h2>
+    <h2>{{this.id}}</h2>
+    <button class = "eaten" data-id="{{this.id}}" data-eaten = "{{this.devoured}}">
+        {{#if devoured}} Eaten {{else}} Eat Me! {{/if}}
+    </button>
+{{/each}}
