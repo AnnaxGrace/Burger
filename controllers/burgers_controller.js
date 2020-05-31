@@ -12,4 +12,12 @@ router.get("/", function(req, res) {
     })
 })
 
+router.post("/api/burgers", function(req, res) {
+    // console.log(req.body)
+        newBurger.insertOne([req.body.burger_name], function(result) {
+            console.log(res);
+            res.json({ id: res.insertId });
+        })
+})
+
 module.exports = router;

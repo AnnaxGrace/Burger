@@ -1,3 +1,14 @@
 h1 {
     text-align: center;
 }
+
+.eaten {
+    color:blue;
+    text-align: right;
+}
+
+.notEaten {
+    color: red;
+    text-align: left;
+    justify-content: left;
+}
