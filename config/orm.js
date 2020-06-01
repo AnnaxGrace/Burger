@@ -20,13 +20,13 @@ var orm = {
 
     },
 
-    updateOne: function(table, tableProperty, tablePropertyValue, id, idVal, cb) {
-        let query = "UPDATE ?? SET ?? = ? WHERE ?? = ? "
-        connection.query(query, [table, tableProperty, tablePropertyValue, id, idVal], function(err, result) {
+    updateOne: function(table, tableProperty, tablePropertyValue, idVal, cb) {
+        let query = "UPDATE ?? SET ?? = " + tablePropertyValue + " WHERE id = " + idVal 
+        connection.query(query, [table, tableProperty], function(err, result) {
             if (err) throw err;
             cb(result)
         });
-    }
+    },
 
 }
 

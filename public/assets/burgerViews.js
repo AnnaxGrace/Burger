@@ -3,12 +3,24 @@
 
 $(function() {
     $(".notEaten").on("click", function (event) {
-        console.log("clicked")
+        var id = $(this).data("id");
+        console.log(id);
+
+        var newEatenState = {
+            devoured: true
+        }
+        
+        $.ajax("/api/burgers/" + id, {
+            type: "PUT",
+            data: newEatenState
+        }).then(function() {
+            console.log("ajax ran");
+            location.reload();
+        });
     });
 
     $(".create-form").on("submit", function(event) {
         event.preventDefault();
-        console.log("clicked");
 
         var newBurger = {
             burger_name: $("#newHamburger").val().trim()
@@ -18,7 +30,7 @@ $(function() {
             type: "POST",
             data: newBurger
         }).then(function() {
-            console.log("working");
+            console.log("working")
             location.reload()
         });
     });

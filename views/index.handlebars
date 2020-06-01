@@ -3,11 +3,14 @@
 
 
 {{#each burgers}}
+    {{!-- <div {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}}> --}}
     <h2 {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}}>{{this.burger_name}}</h2>
-    <h2>{{this.id}}</h2>
-    <button {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}} data-id="{{this.id}}" data-eaten = "{{this.devoured}}">
-       {{#if devoured}} Eaten {{else}} Eat Me! {{/if}}
-    </button>
+    {{!-- <h2>{{this.id}}</h2> --}}
+    {{!-- <div class = {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}} > --}}
+        <button {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}} data-id="{{this.id}}" data-eaten = "{{this.devoured}}">
+            {{#if devoured}} Eaten {{else}} Eat Me! {{/if}}
+        </button>
+    {{!-- </div> --}}
 {{/each}}
 
 <form class ="create-form">

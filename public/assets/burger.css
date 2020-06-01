@@ -4,11 +4,26 @@ h1 {
 
 .eaten {
     color:blue;
+    display: flex;  
     text-align: right;
+    margin-left: 70%;
+    margin-right: 5%;
 }
 
 .notEaten {
     color: red;
     text-align: left;
-    justify-content: left;
+    display: flex;
+    margin-right: 70%;
+    margin-left: 5%;
+}
+
+.create-form {
+    margin-top: 50px;
+    align-content: center;
+    text-align: center;
+}
+
+body {
+    text-align: right;
 }

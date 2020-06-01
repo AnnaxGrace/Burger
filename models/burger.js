@@ -11,13 +11,13 @@ var burgerORM = {
     insertOne: function(newBurger, cb) {
         orm.insertOne("burgers", "burger_name", newBurger, function(res) {
             cb(res);
-        })
+        });
     },
 
-    updateOne: function(tf, burgerID, wantedBurgerID, cb) {
-        orm.updateOne("burgers", "devoured", tf, burgerID, wantedBurgerID, function(res) {
+    updateOne: function(tf, idNum, cb) {
+        orm.updateOne("burgers", "devoured", tf, idNum, function(res) {
             cb(res);
-        })
+        });
     }
 }
 
