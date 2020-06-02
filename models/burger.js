@@ -1,6 +1,6 @@
 var orm = require("../config/orm.js")
 
-
+//Is the middleware inbetween our controller and our orm. Put parameters for our burger orm that do not need to be defined in our controller.
 var burgerORM = {
     selectAll: function(cb) {
         orm.selectAll("burgers", function(res) {

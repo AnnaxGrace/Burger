@@ -1,5 +1,6 @@
 var mysql = require("mysql");
 
+//this creates the connection for both heroku and localhost
 var connection = mysql.createConnection(process.env.JAWSDB_URL || {
     host: "localhost",
     port: 3306,
@@ -18,5 +19,3 @@ connection.connect(function(err) {
 
 module.exports = connection;
 
-//JAWSDB_URL extensions
-//heroku

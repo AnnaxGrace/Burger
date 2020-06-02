@@ -1,18 +1,15 @@
 <h1>Hamburgers</h1>
 
 
-
+{{!-- For each item in the table with values, create an h2 and a button. Changes class depending on boolean. --}}
 {{#each burgers}}
-    {{!-- <div {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}}> --}}
     <h2 {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}}>{{this.burger_name}}</h2>
-    {{!-- <h2>{{this.id}}</h2> --}}
-    {{!-- <div class = {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}} > --}}
         <button {{#if devoured}} class = "eaten" {{else}} class = "notEaten" {{/if}} data-id="{{this.id}}" data-eaten = "{{this.devoured}}">
             {{#if devoured}} Eaten {{else}} Eat Me! {{/if}}
         </button>
-    {{!-- </div> --}}
 {{/each}}
 
+{{!-- Creates a form that will take information for our new item that we will insert --}}
 <form class ="create-form">
     <div class = "form-group">
         <label for = "newHamburger">New Burger Name: </label>
