@@ -3,7 +3,7 @@ h1 {
 }
 
 .eaten {
-    color:blue;
+    color:black;
     display: flex;  
     text-align: right;
     margin-left: 70%;
@@ -11,11 +11,13 @@ h1 {
 }
 
 .notEaten {
-    color: red;
+    color: white;
     text-align: left;
     display: flex;
     margin-right: 70%;
     margin-left: 5%;
+    background-color: black;
+    border-radius: 10px;
 }
 
 .create-form {
@@ -26,4 +28,14 @@ h1 {
 
 body {
     text-align: right;
+}
+
+.icon {
+    color: black;
+    margin-right: 50%;
+}
+
+.create-form {
+    background-color: black;
+    color: white;
 }
